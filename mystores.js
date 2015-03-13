@@ -1,13 +1,3 @@
-/*
-	Welcome to Amazon Fees, Earnings, and Investment Calculator!
-	Made by Sohel Mansuri
-	
-	The basic goal of this simple Amazon Fees, Earnings, and Investment Calculator is to help Amazon Sellers
-	easily calculate Amazon fees and Earnings in order to determine if an investment is worth it.
-	
-	Simply enter the cost of the product, the product price on Amazon you intent to list it for, the type of product to get started!
-*/ 
-
 var objs = [];
 
 obj =
@@ -57,7 +47,6 @@ var clearArray = function() {
 }
   
 myStoresPopulate = function(x) {
-	//document.getElementById("storesResult").innerHTML = '';
 	clearArray();
 	document.getElementById("storesResult").innerHTML = '';
 	if(x === 'points') {
@@ -101,93 +90,7 @@ myStoresPopulate = function(x) {
 			html += "<hr class='storebar'>";
 		}
 		$("#storesResult").append(html);
-		/*
-		
-		$("#storesResult").append(); */
 	});
-}
-
-var calcFeesAndEarningsFunction = function()
-{
-  var productPrice, typeOfSeller, typeOfProduct, amazonFees, referralFee, variableClosingFee, sellerFee, totalSellerAmazonEarningBeforeShipping, standardShippingCredit, earnings, invest, profit;
-  standardShippingCredit = 3.99;
-  
-  productPrice = document.getElementById("productPrice").value;
-  productPrice = Number(productPrice);
-  
-  productCost = document.getElementById("productCost").value;
-  productCost = Number(productCost);
-  
-  typeOfSeller = document.getElementById("typeOfSeller").value;
-  if (typeOfSeller === "Individual") {
-    sellerFee = 0.99;	  
-  } else if (typeOfSeller === "Professional") {
-    sellerFee = 0.00;
-  } 
-  
-  typeOfProduct = document.getElementById("typeOfProduct").value;
-  variableClosingFee = 0.45;
-  if (typeOfProduct === "3D Printed Products") {
-  	referralFee = 0.12;
-  } else if (typeOfProduct === "Amazon Device Accessories") {
-  	referralFee = 0.45;
-  } else if (typeOfProduct === "Automotive & Powersports") {
-  	referralFee = 0.10;
-  } else if (typeOfProduct === "Camera and Photo") {
-  	referralFee = 0.08;
-  } else if (typeOfProduct === "Cell Phone Devices") {
-  	referralFee = 0.08;
-  } else if (typeOfProduct === "Consumer Electronics") {
-  	referralFee = 0.08;
-  } else if (typeOfProduct === "Entertainment Collectibles") {
-  	referralFee = 0.20;
-  } else if (typeOfProduct === "Independent Design") {
-  	referralFee = 0.25;
-  } else if (typeOfProduct === "Industrial & Scientific (including Food Service and Janitorial & Sanitation)") {
-  	referralFee = 0.12;
-  } else if (typeOfProduct === "Jewelry") {
-  	referralFee = 0.20;
-  } else if (typeOfProduct === "Personal Computers") {
-  	variableClosingFee = 1.35;
-  	referralFee = 0.06;
-  } else if (typeOfProduct === "Sports Collectibles") {
-  	referralFee = 0.20;
-  } else if (typeOfProduct === "Tools & Home Improvement") {
-  	referralFee = 0.12;
-  } else if (typeOfProduct === "Video Game Consoles") {
- 	variableClosingFee = 1.35;
-  	referralFee = 0.08;
-  } else if (typeOfProduct === "Books") {
-  	variableClosingFee = 1.35;
-	referralFee = 0.15; 
-  } else if (typeOfProduct === "Video Games") {
-  	variableClosingFee = 1.35;
-	referralFee = 0.15;
-  } else {
-  	referralFee = 0.15;
-  }
-  
-  
-  amazonFees = (productPrice * referralFee) + variableClosingFee + sellerFee;
-  totalSellerAmazonEarningBeforeShipping = productPrice - amazonFees;
-  earnings = totalSellerAmazonEarningBeforeShipping + standardShippingCredit;
-  profit = earnings - productCost;
-  
-  if(earnings > productCost) {
-  	invest = "Yes";
-  } else {
-  	invest = "No";
-  }
-  
-  document.getElementById("result").innerHTML = 
-  	"Price: $" + productPrice +
-  	"<br>Shipping: $" + standardShippingCredit +
-  	"<br>Amazon Fees: $" + amazonFees.toFixed(2) +
-  	"<br>Your Earnings: $" + earnings.toFixed(2) +
-  	"<br><br>Invest? " + invest +
-  	"<br>Profit: $" + profit.toFixed(2);
-  	  	
-  
 }
 
 window.onload = function()
