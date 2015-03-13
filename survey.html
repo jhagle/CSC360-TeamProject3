@@ -22,13 +22,33 @@
 
 </table>
 <center><hr class="titlebar" style="align-text: left"><br>
-    <button type="button" id="scan" onclick="showResults()">Scan</button> or <input type="text" name="receiptNum" id="receipt" placeholder="Enter a receipt number"><br><br>
-    <hr>
+    How do you rate your overall experience?
+    <br>
+    <img src="star.png" id="1" onclick="starRating(1)" width="25" height="25">
+    <img src="star.png" id="2" onclick="starRating(2)" width="25" height="25">
+    <img src="star.png" id="3" onclick="starRating(3)" width="25" height="25">
+    <img src="star.png" id="4" onclick="starRating(4)" width="25" height="25">
+    <img src="star.png" id="5" onclick="starRating(5)" width="25" height="25">
+    <br>
+    <button type="button" name="reset" onclick="resetStar()">Reset Star Rating</button>
+    <hr style="border-top: dotted 2px;" />
+    How clean was the store?
+    <br>
+    <input type="range" oninput="slideRating(this.value)" min="0" max="100" value="50" step="25" />
+    <div id="slideRat">Average</div>
+    <hr style="border-top: dotted 2px;" />
+    Which food was the best tasting?
     <div id="results"></div>
+    <form style="align-items: baseline">
+        <input type="radio" name="check" value="Rice"> Rice Plate <br>
+        <input type="radio" name="check" value="Hummus"> Hummus <br>
+        <input type="radio" name="check" value="Chips"> Pita Chips
+    </form>
+    <hr>
 
 </center>
 <footer>
-    <center><button type="button" id="survey" onclick="checkSurvey()" style="vertical-align: bottom">Take a Survey!</button></center>
+    <center><button type="button" id="completeSurvey" onclick="completeSurvey()" style="vertical-align: bottom">Submit Survey!</button></center>
 
 </footer>
 </html>
