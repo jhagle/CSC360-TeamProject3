@@ -8,6 +8,17 @@
 	<meta charset="UTF-8">
 	<title> MyRewards: Login </title>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"> </script>
+    <script>
+	function forgotPasswordFunction() {
+    	alert("Forgot Password feature coming soon!");
+	}
+	function signUpFunction() {
+    	alert("Sign Up feature coming soon!");
+	}
+	function facebookSignUp() {
+    	alert("Sign Up with Facebook coming soon!");
+	}
+	</script>
 	<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -24,9 +35,9 @@
       	<form>Username:<br>
       	<input type="text" id="username" value="CMiller1"> <br><br>
 		Password: <br>
-		<input type="password" id="password" value="MyPassword1!"> <br><br>
-      	<input type="button" id="forgotpassword" value="Forgot Password?"><br><br>
-        <input type="button" id="signup" value="Sign Up">
+		<input type="password" id="password" value="MyPassword1!" > <br><br>
+      	<input type="button" id="forgotpassword" value="Forgot Password?" onClick="forgotPasswordFunction()"><br><br>
+        <input type="button" id="signup" value="Sign Up" onClick="signUpFunction()">
       	<input type="button" id="login" value="Login" onclick="window.location.href='index.html'"></form>
       </td>
     </tr>
@@ -37,7 +48,7 @@
 	
 <div id="loginFooter"><center>
 	<form>
-		<input type="submit" name="facebooksignup" value="Sign Up With Facebook">
+		<input type="submit" name="facebooksignup" value="Sign Up With Facebook" onClick="facebookSignUp()">
 	</form>
     </center>
 </div>
