@@ -1,0 +1,51 @@
+<!-- CSC360 Winter 2015: Team Project 4       	-->
+<!-- Piotr Bogun, Sohel Mansuri, James Hagle  	-->
+<!-- MyRewards: Index             				-->
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> MyRewards: My Stores </title>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="mystores.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body class="mystores">
+	<table width="350">
+	    <tr>
+	      <td align="center"><img src="M.png" width="50" height="50"></td>
+	      <td align="center"><h8>My Stores</h8></td>
+	      <td align="center"><img src="settings.png" width="50" height="50"></td>
+        </tr>
+       
+    </table>  
+    <center><hr class="titlebar"><br>
+    <table width="350" border="0">
+      <tr>
+        <td align="right">
+	Order By: 
+    <select id="sort">
+  		<option value="points">Points</option>
+	  	<option value="nearby">Nearby</option>
+  		<option value="storeName">Store Name</option>
+	</select>
+    <input id="button1" type="button" value="Go!" />
+    </td>
+    </tr>
+    </table>
+    <br>
+    <table width="350" border="0">
+      <tr>
+        <td width="20%"></td>
+        <td width="50%">Store:</td>
+        <td width="30%">Points:</td>
+      </tr>
+    </table><hr class="storebar">
+</center>
+	  <p id="test"></p>
+      <p id="storesResult"></p>
+<footer>
+</footer>
+</html>
