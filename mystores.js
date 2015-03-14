@@ -82,7 +82,7 @@ myStoresPopulate = function(x) {
 		html += "<br>Nearby: " + this.storedistance + " miles";
 		html += "<br>" + this.storeaddresslineone + "<br>" + this.storeaddresslinetwo;
 		html += "</td>";
-       	html += "<td width='105'>" + this.storepoints + "</td>";
+       	html += "<td width='105'>" + this.storepoints + " <a href='myrewards.html'><img align='right' src='arrow.png' width='25' height='25' style='padding-bottom: 10px; padding-right: 10px'></a></td>";
       	html += "</tr></table>";
 		if(index == objs.length - 1) {
 			

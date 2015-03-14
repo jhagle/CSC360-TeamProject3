@@ -1,0 +1,48 @@
+<!-- CSC360 Winter 2015: Team Project 4       	-->
+<!-- Piotr Bogun, Sohel Mansuri, James Hagle  	-->
+<!-- MyRewards: My Rewards             			-->
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> MyRewards: My Rewards </title>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="myrewards.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body class="mystores">
+	<table width="350">
+	    <tr>
+	      <td align="center" width="20%"><a href="index.html"><img src="M.png" width="50" height="50"></a></td>
+	      <td align="center" width="60%"><h8>I Dream of Falafel</h8></td>
+	      <td align="center" width="20%"><a href="settings.html"><img src="settings.png" width="50" height="50"></a></td>
+        </tr>
+       
+    </table>  
+    <center><hr class="titlebar"><br>
+	<table width="350" border="0">
+      <tr>
+        <td align="right">
+	Order By: 
+    <select id="sort">
+  		<option value="pointcostinc">Points Cost Increase</option>
+	  	<option value="pointcostdec">Pionts Cost Decrease</option>
+	</select>
+    <input id="button1" type="button" value="Go!" />
+    </td>
+    </tr>
+    </table>
+    <br>
+    <table width="350" border="0">
+      <tr>
+        <td width="60%">Click to Redeem Reward.</td>
+        <td width="40%">You have: 90 points!</td>
+      </tr>
+    </table>
+    <hr class="storebar">
+	</center>
+      <p id="storesResult"></p>
+
+</html>
